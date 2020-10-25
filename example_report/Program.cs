@@ -9,14 +9,14 @@ using System.Threading.Tasks;
 
 namespace example_report
 {
-    /* структура для создания отчёта, которая содержит наименование производственной единицы и относящееся к ней оборудование*/
-    public struct EquipmentDailyReport
+    /* класс для создания отчёта, которая содержит наименование производственной единицы и относящееся к ней оборудование*/
+    public class EquipmentDailyReport
     {
         public string UnitName { get; set; }
         public List<Report> Equipments { get; set; }
     }
-    /* структура, содержащая информацию по конкретной единице оборудования () */
-    public struct Report
+    /* класс, содержащий информацию по конкретной единице оборудования () */
+    public class Report
     {
         /* наименование */
         public string Name { get; set; }
@@ -28,8 +28,8 @@ namespace example_report
         public List<MonthEvent> MonthEvents { get; set; }
     }
 
-    /* структура, содержащая обобщенную информацию о событиях за сутки */
-    public struct DayEvent
+    /* класс, содержащий обобщенную информацию о событиях за сутки */
+    public class DayEvent
     {
         /* длительность */
         public int Duration { get; set; }
@@ -38,8 +38,8 @@ namespace example_report
         /* тип события */
         public string Type { get; set; }
     }
-    /* структура, содержащая обобщенную информацию о событиях за месяц */
-    public struct MonthEvent
+    /* класс, содержащий обобщенную информацию о событиях за месяц */
+    public class MonthEvent
     {
         /* длительность */
         public int Duration { get; set; }
@@ -49,8 +49,8 @@ namespace example_report
         public string Type { get; set; }
     }
 
-    /* структура, содержащая подробную информацию о событиях за сутки */
-    public struct Event
+    /* класс, содержащий подробную информацию о событиях за сутки */
+    public class Event
     {
         /* начало события */
         public DateTime SD { get; set; }
